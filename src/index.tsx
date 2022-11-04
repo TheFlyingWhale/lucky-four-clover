@@ -1,22 +1,22 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import LandingOne from "./routes/ladingOne";
-import LandingTwo from "./routes/landingTwo";
+import Root from "./routes/root";
 import Store from "./routes/store";
+import Product from "./routes/product";
 
 const router = createBrowserRouter([
 	{
 		path: "/",
-		element: <LandingOne />,
-	},
-	{
-		path: "/test",
-		element: <LandingTwo />,
+		element: <Root />,
 	},
 	{
 		path: "/store",
 		element: <Store />,
+	},
+	{
+		path: "/product",
+		element: <Product />,
 	},
 ]);
 

@@ -1,0 +1,58 @@
+.white {
+	color: white;
+}
+
+.bg-white {
+	background-color: white;
+}
+
+.light-gray {
+	color: #566656;
+}
+
+.bg-light-gray {
+	background-color: #566656;
+}
+
+.gray {
+	color: #304030;
+}
+
+.bg-gray {
+	background-color: #304030;
+}
+
+.black {
+	color: #293329;
+}
+
+.bg-black {
+	background-color: #293329;
+}
+
+.green-dark {
+	color: #204030;
+}
+
+.bg-green-dark {
+	background-color: #204030;
+}
+
+.bg-gradient-medium-lime {
+	background: rgb(200, 255, 191);
+	background: linear-gradient(
+		90deg,
+		rgba(200, 255, 191, 1) 0%,
+		rgba(112, 204, 158, 1) 100%
+	);
+}
+
+.gradient-medium-lime {
+	color: rgb(200, 255, 191);
+	background: -webkit-linear-gradient(
+		rgba(200, 255, 191, 1) 0%,
+		rgba(112, 204, 158, 1) 100%
+	);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
