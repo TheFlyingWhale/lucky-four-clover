@@ -46,8 +46,8 @@ const Root = () => {
 				<AppReviews />
 
 				<CallToAction
-					title="Increase your luck today"
-					text="Turn your life around"
+					title="Join us!"
+					text="We're up all night to get lucky"
 					buttonText="Download"
 					url="/"
 				/>
