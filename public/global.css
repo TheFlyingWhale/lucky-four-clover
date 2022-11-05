@@ -156,3 +156,41 @@ a:active {
 a:active > * {
 	color: #293329;
 }
+
+button {
+	padding: 9px 24px;
+	border-radius: 12px;
+	border: 0;
+	background: linear-gradient(
+		rgba(200, 255, 191, 1) 0%,
+		rgba(112, 204, 158, 1) 100%
+	);
+}
+
+button:hover {
+	cursor: pointer;
+	background: linear-gradient(
+		rgba(200, 255, 191, 0.75) 0%,
+		rgba(112, 204, 158, 0.75) 100%
+	);
+}
+
+button:active {
+	background: linear-gradient(
+		rgba(150, 191, 143, 1) 0%,
+		rgba(77, 140, 109, 1) 100%
+	);
+}
+
+button > p {
+	font-size: 1.5em;
+	font-weight: 600;
+}
+
+button:hover > p {
+	color: #252525;
+}
+
+button:active > p {
+	color: rgba(200, 255, 191, 1);
+}

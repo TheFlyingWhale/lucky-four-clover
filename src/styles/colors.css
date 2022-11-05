@@ -6,6 +6,14 @@
 	background-color: white;
 }
 
+.white-green {
+	color: #f2fff3;
+}
+
+.bg-white-green {
+	background-color: #f2fff3;
+}
+
 .light-gray {
 	color: #566656;
 }
@@ -16,6 +24,10 @@
 
 .gray {
 	color: #304030;
+}
+
+.gray-gray {
+	color: #404040;
 }
 
 .bg-gray {
@@ -41,7 +53,6 @@
 .bg-gradient-medium-lime {
 	background: rgb(200, 255, 191);
 	background: linear-gradient(
-		90deg,
 		rgba(200, 255, 191, 1) 0%,
 		rgba(112, 204, 158, 1) 100%
 	);
