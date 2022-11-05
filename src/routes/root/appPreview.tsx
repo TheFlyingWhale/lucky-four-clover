@@ -1,6 +1,7 @@
 import "../../styles/colors.css";
 import appMap from "../../assets/appMap.png";
 import appRank from "../../assets/appRank.png";
+import appVerification from "../../assets/appVerification.png";
 import IconMap from "../../assets/IconMap.svg";
 import IconStar from "../../assets/IconStar.svg";
 import IconCheck from "../../assets/IconCheck.svg";
@@ -30,7 +31,7 @@ const AppPreview = () => {
 				svg={IconCheck}
 				title="Verification"
 				text="Verify yours and others findings Together we increase our luck"
-				image={appMap}
+				image={appVerification}
 			/>
 		</Container>
 	);
