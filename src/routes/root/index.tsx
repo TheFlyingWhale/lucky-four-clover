@@ -22,7 +22,7 @@ const Root = () => {
 					display: "flex",
 					flexDirection: "column",
 					alignItems: "center",
-					gap: 180,
+					gap: 6 * 40,
 				}}
 			>
 				<Recommendations />
