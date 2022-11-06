@@ -8,7 +8,7 @@ declare module "*png" {
 	export default content;
 }
 
-declare module "*eps" {
+declare module "*jpg" {
 	const content: any;
 	export default content;
 }

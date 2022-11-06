@@ -1,18 +1,16 @@
 import "../../styles/colors.css";
 import "../../styles/effects.css";
 import PageHeader from "../../components/pageHeader";
-import PageBody from "../../components/pageBody";
 import RootHero from "./rootHero";
 import Recommendations from "./recommendations";
 import CallToAction from "../../components/callToAction";
 import AppPreview from "./appPreview";
 import StorePreview from "./storePreview";
 import AppReviews from "./appReviews";
-import PageFooter from "../../components/footer";
 
 const Root = () => {
 	return (
-		<PageBody>
+		<>
 			<PageHeader>
 				<RootHero />
 			</PageHeader>
@@ -52,8 +50,7 @@ const Root = () => {
 					url="/"
 				/>
 			</main>
-			<PageFooter />
-		</PageBody>
+		</>
 	);
 };
 

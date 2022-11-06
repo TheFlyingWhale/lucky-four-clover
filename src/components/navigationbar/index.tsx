@@ -3,7 +3,7 @@ import logo from "../../assets/logo.svg";
 
 const NavigationBar = () => {
 	return (
-		<div
+		<header
 			style={{
 				position: "fixed",
 				width: "100vw",
@@ -26,7 +26,7 @@ const NavigationBar = () => {
 				<LogoLink />
 				<NavLinks />
 			</div>
-		</div>
+		</header>
 	);
 };
 

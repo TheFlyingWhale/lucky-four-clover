@@ -45,6 +45,25 @@ const helpAndContactLinks: FooterLink[] = [
 	},
 ];
 
+const ourServicesLinks: FooterLink[] = [
+	{
+		text: "Lucky holding",
+		url: "/",
+	},
+	{
+		text: "Get lucky",
+		url: "/",
+	},
+	{
+		text: "Partner lucky",
+		url: "/",
+	},
+	{
+		text: "Service de luck",
+		url: "/",
+	},
+];
+
 const PageFooter = () => {
 	return (
 		<footer
@@ -90,6 +109,10 @@ const PageFooter = () => {
 					<FooterColumn
 						title="Help and contact"
 						links={helpAndContactLinks}
+					/>
+					<FooterColumn
+						title="Our services"
+						links={ourServicesLinks}
 					/>
 					<LogoLink />
 				</Container>

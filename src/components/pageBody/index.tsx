@@ -13,6 +13,7 @@ const PageBody: React.FC<PageBodyProps> = ({ children }) => {
 				display: "flex",
 				flexDirection: "column",
 				alignItems: "center",
+				justifyContent: "space-between",
 				gap: 120,
 			}}
 			className="bg-white-green"

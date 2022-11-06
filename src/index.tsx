@@ -4,19 +4,26 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from "./routes/root";
 import Store from "./routes/store";
 import Product from "./routes/product";
+import RoutesWrapper from "./components/routesWrapper";
 
 const router = createBrowserRouter([
 	{
 		path: "/",
-		element: <Root />,
-	},
-	{
-		path: "/store",
-		element: <Store />,
-	},
-	{
-		path: "/product",
-		element: <Product />,
+		element: <RoutesWrapper />,
+		children: [
+			{
+				path: "/",
+				element: <Root />,
+			},
+			{
+				path: "/store",
+				element: <Store />,
+			},
+			{
+				path: "/product",
+				element: <Product />,
+			},
+		],
 	},
 ]);
 

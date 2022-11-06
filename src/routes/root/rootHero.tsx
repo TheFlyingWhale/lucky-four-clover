@@ -4,19 +4,11 @@ import IconCheck from "../../assets/IconCheck.svg";
 import GoogleStore from "../../assets/googleStore.png";
 import AppStore from "../../assets/appStore.svg";
 import { NavLink } from "react-router-dom";
+import HeroContainer from "../../components/heroContainer";
 
 const RootHero = () => {
 	return (
-		<div
-			style={{
-				maxWidth: "880px",
-				height: "900px",
-				display: "flex",
-				flexDirection: "column",
-				justifyContent: "center",
-				gap: 48,
-			}}
-		>
+		<HeroContainer>
 			<div
 				style={{
 					display: "flex",
@@ -86,7 +78,7 @@ const RootHero = () => {
 					/>
 				</NavLink>
 			</div>
-		</div>
+		</HeroContainer>
 	);
 };
 
