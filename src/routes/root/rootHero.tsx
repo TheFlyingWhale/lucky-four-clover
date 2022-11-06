@@ -65,10 +65,10 @@ const RootHero = () => {
 					gap: 36,
 				}}
 			>
-				<NavLink to="/">
+				<NavLink to="/download">
 					<img src={AppStore} alt="Apple app store" />
 				</NavLink>
-				<NavLink to="/">
+				<NavLink to="/download">
 					<img
 						src={GoogleStore}
 						alt="Google app store"

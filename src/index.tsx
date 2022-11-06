@@ -5,6 +5,7 @@ import Root from "./routes/root";
 import Store from "./routes/store";
 import Product from "./routes/product";
 import RoutesWrapper from "./components/routesWrapper";
+import Download from "./routes/download";
 
 const router = createBrowserRouter([
 	{
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
 			{
 				path: "/product",
 				element: <Product />,
+			},
+			{
+				path: "/download",
+				element: <Download />,
 			},
 		],
 	},

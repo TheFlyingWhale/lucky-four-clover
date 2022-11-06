@@ -1,3 +1,6 @@
+import { NavLink } from "react-router-dom";
+import "./productCard.css";
+
 interface ProductCardProps {
 	image: string;
 	title: string;
@@ -14,88 +17,96 @@ const ProductCard: React.FC<ProductCardProps> = ({
 	price,
 }) => {
 	return (
-		<div
-			className="drop-shadow"
+		<NavLink
+			to="/product"
 			style={{
 				display: "flex",
-				flexDirection: "column",
-				backgroundColor: "white",
-				borderRadius: "12px",
-				padding: 24,
-				width: "fit-content",
-				gap: 24,
-				alignItems: "center",
 				flexGrow: 1,
 				flexBasis: 0,
 			}}
 		>
-			<img
-				src={image}
-				alt={title}
-				style={{
-					width: 200,
-				}}
-			/>
 			<div
+				className="card-container"
 				style={{
-					width: "100%",
 					display: "flex",
 					flexDirection: "column",
-					gap: 6,
+					backgroundColor: "white",
+					borderRadius: "12px",
+					padding: 24,
+					width: "fit-content",
+					gap: 24,
+					alignItems: "center",
+					flexGrow: 1,
 				}}
 			>
+				<img
+					src={image}
+					alt={title}
+					style={{
+						width: 200,
+					}}
+				/>
 				<div
 					style={{
+						width: "100%",
 						display: "flex",
 						flexDirection: "column",
-						gap: 0,
+						gap: 6,
 					}}
 				>
-					{name && (
+					<div
+						style={{
+							display: "flex",
+							flexDirection: "column",
+							gap: 0,
+						}}
+					>
+						{name && (
+							<p
+								style={{
+									fontSize: `${(1 / 16) * 12}em`,
+								}}
+							>
+								{name}
+							</p>
+						)}
 						<p
 							style={{
-								fontSize: `${(1 / 16) * 12}em`,
+								fontSize: `${(1 / 16) * 30}em`,
+								fontWeight: 600,
 							}}
 						>
-							{name}
+							{title}
+						</p>
+					</div>
+					{text && (
+						<p
+							style={{
+								fontSize: `${(1 / 16) * 18}em`,
+							}}
+						>
+							{text}
 						</p>
 					)}
-					<p
-						style={{
-							fontSize: `${(1 / 16) * 30}em`,
-							fontWeight: 600,
-						}}
-					>
-						{title}
-					</p>
-				</div>
-				{text && (
-					<p
-						style={{
-							fontSize: `${(1 / 16) * 18}em`,
-						}}
-					>
-						{text}
-					</p>
-				)}
-				{price && (
-					<p
-						style={{
-							fontSize: `${(1 / 16) * 18}em`,
-						}}
-					>
-						${price.split(",")[0]}
-						<span
+					{price && (
+						<p
 							style={{
-								fontSize: `${(1 / 16) * 9}em`,
+								fontSize: `${(1 / 16) * 18}em`,
 							}}
 						>
-							{price.split(",")[1]}
-						</span>
-					</p>
-				)}
+							${price.split(",")[0]}
+							<span
+								style={{
+									fontSize: `${(1 / 16) * 9}em`,
+								}}
+							>
+								{price.split(",")[1]}
+							</span>
+						</p>
+					)}
+				</div>
 			</div>
-		</div>
+		</NavLink>
 	);
 };
 

@@ -19,6 +19,7 @@ const Product = () => {
 					style={{
 						display: "flex",
 						gap: 60,
+						justifyContent: "center",
 					}}
 				>
 					<img

@@ -12,7 +12,7 @@ const CallToAction: React.FC<CallToActionProps> = ({
 	title,
 	text,
 	buttonText,
-	url,
+	url = "/",
 }) => {
 	return (
 		<Container
@@ -47,7 +47,7 @@ const CallToAction: React.FC<CallToActionProps> = ({
 					{text}
 				</p>
 			</div>
-			<NavLink to="/">
+			<NavLink to={url}>
 				<button>
 					<p>{buttonText}</p>
 				</button>

@@ -29,7 +29,7 @@ const Root = () => {
 					title="Increase your luck today"
 					text="Turn your life around"
 					buttonText="Download"
-					url="/"
+					url="/download"
 				/>
 				<AppPreview />
 
@@ -37,7 +37,7 @@ const Root = () => {
 					title="The luckiest merch"
 					text="Increase your chances with up to 999%"
 					buttonText="Go to store"
-					url="/"
+					url="/store"
 				/>
 				<StorePreview />
 
@@ -47,7 +47,7 @@ const Root = () => {
 					title="Join us!"
 					text="We're up all night to get lucky"
 					buttonText="Download"
-					url="/"
+					url="/download"
 				/>
 			</main>
 		</>
