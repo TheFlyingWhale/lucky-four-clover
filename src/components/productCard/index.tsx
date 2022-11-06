@@ -20,14 +20,6 @@ const ProductCard: React.FC<ProductCardProps> = ({
 }) => {
 	const [isImageLoaded, setIsImageLoaded] = useState(false);
 
-	window.addEventListener("load", (event) => {
-		const image = document.querySelector("img");
-		if (image) {
-			const isLoaded = image.complete && image.naturalHeight !== 0;
-			setIsImageLoaded(isLoaded);
-		}
-	});
-
 	return (
 		<NavLink
 			to="/product"
@@ -51,18 +43,19 @@ const ProductCard: React.FC<ProductCardProps> = ({
 					flexGrow: 1,
 				}}
 			>
-				{isImageLoaded ? (
-					<img
-						id="productImage"
-						src={image}
-						alt={title}
-						style={{
-							width: 200,
-						}}
-					/>
-				) : (
-					<Loader />
-				)}
+				<img
+					onLoad={() => {
+						setIsImageLoaded(true);
+					}}
+					id="productImage"
+					src={image}
+					alt={title}
+					style={{
+						width: 200,
+						display: isImageLoaded ? "inline" : "none",
+					}}
+				/>
+				{!isImageLoaded && <Loader />}
 				<div
 					style={{
 						width: "100%",

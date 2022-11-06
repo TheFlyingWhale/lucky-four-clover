@@ -1,12 +1,31 @@
+import "./loader.css";
+
 const Loader = () => {
 	return (
 		<div
 			style={{
-				backgroundColor: "gray",
-				width: "100%",
+				width: "200px",
 				height: "200px",
+				display: "flex",
+				justifyContent: "center",
+				alignItems: "center",
 			}}
-		></div>
+		>
+			<div className="lds-spinner">
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
 	);
 };
 
