@@ -1,4 +1,6 @@
+import { useEffect, useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
+import Loader from "../loader";
 import "./productCard.css";
 
 interface ProductCardProps {
@@ -16,6 +18,16 @@ const ProductCard: React.FC<ProductCardProps> = ({
 	name,
 	price,
 }) => {
+	const [isImageLoaded, setIsImageLoaded] = useState(false);
+
+	window.addEventListener("load", (event) => {
+		const image = document.querySelector("img");
+		if (image) {
+			const isLoaded = image.complete && image.naturalHeight !== 0;
+			setIsImageLoaded(isLoaded);
+		}
+	});
+
 	return (
 		<NavLink
 			to="/product"
@@ -39,13 +51,18 @@ const ProductCard: React.FC<ProductCardProps> = ({
 					flexGrow: 1,
 				}}
 			>
-				<img
-					src={image}
-					alt={title}
-					style={{
-						width: 200,
-					}}
-				/>
+				{isImageLoaded ? (
+					<img
+						id="productImage"
+						src={image}
+						alt={title}
+						style={{
+							width: 200,
+						}}
+					/>
+				) : (
+					<Loader />
+				)}
 				<div
 					style={{
 						width: "100%",

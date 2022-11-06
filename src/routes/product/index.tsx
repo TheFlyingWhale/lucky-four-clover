@@ -101,7 +101,7 @@ const Product = () => {
 							<select
 								name="sizes"
 								id="size-select"
-								placeholder="Choose size"
+								defaultValue="Choose size"
 								style={{
 									padding: "6px 12px",
 									fontSize: `${(1 / 16) * 16}em`,
@@ -109,16 +109,6 @@ const Product = () => {
 									borderColor: "#CED4DA",
 								}}
 							>
-								<option
-									disabled
-									selected
-									value=""
-									style={{
-										color: "blue",
-									}}
-								>
-									Choose size
-								</option>
 								<option value="small">Small</option>
 								<option value="medium">Medium</option>
 								<option value="large">Large</option>
